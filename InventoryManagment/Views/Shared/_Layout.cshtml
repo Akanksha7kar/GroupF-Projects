@@ -1,95 +1,4 @@
-﻿<!--!DOCTYPE html>
-<html>
-<head>
-    <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        li {
-            float: left;
-        }
-
-            li a, .dropbtn {
-                display: inline-block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-                li a:hover, .dropdown:hover .dropbtn {
-                    background-color: red;
-                }
-
-            li.dropdown {
-                display: inline-block;
-            }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-            .dropdown-content a {
-                color: black;
-                padding: 12px 16px;
-                text-decoration: none;
-                display: block;
-                text-align: left;
-            }
-        li p {
-            color: white;
-            text-align: center;
-           
-            text-decoration: none;
-        }
-
-                .dropdown-content a:hover {
-                    background-color: #f1f1f1;
-                }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
-</head>
-<body>
-
-    <ul>
-        <li><p class=" text"> Inventory Managment Syestem</p></li>
-        <li>@Html.ActionLink("Home","Index","Home")</li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Transection</a>
-            <div class="dropdown-content">
-                <a href="ProductReport.aspx"> Products</a>
-                <a href="PurchaseReport.aspx">Purchase Product</a>
-                <a href="SalesReport.aspx"> Sale Product</a>
-            </div>
-        </li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Reports</a>
-            <div class="dropdown-content">
-                <a href="ProductReport.aspx">Product Report</a>
-                <a href="PurchaseReport.aspx">Purchase Report</a>
-                <a href="SalesReport.aspx"> Sales Report</a>
-            </div>
-        </li>
-    </ul>
-
-</body>
-</html>
--->
-
-
+﻿
 <!--old code-->
 <!DOCTYPE html>
 <html>
@@ -99,123 +8,133 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+   
 
     <!--new code style add-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-       body{
-           font-family:Arial,Arial, Helvetica, sans-serif;
-       }
-       .mynav_navbar{
-           overflow: hidden;
-           background-color: #333;
-       }
-       .mynav_navbar a {
-           float: left;
-           font-size: 16px;
-           color: white;
-           text-align: center;
-           padding: 14px 16px;
-           text-decoration: none;
-       }
-       .mynav_dropdown{
-           float: left;
-           overflow: hidden;
-       }
-       .mynav_dropdown .mynav_dropbtn{
-           font-size: 16px;
-           border: none;
-           outline: none;
-           color: white;
-           padding: 14px 16px;
-           background-color: inherit;
-           font-family: inherit;
-           margin: 0;
-       }
+        body {
+            font-family: Arial,Arial, Helvetica, sans-serif;
+        }
 
-       .mynav_navbar a:hover, .mynav_dropdown:hover .mynav_dropbtn{
-           background-color: red;
-       }
-       .mynav_dropdown-content{
-           display: none;
-           position: absolute;
-           background-color: #f9f9f9;
-           min-width: 160px;
-           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-           z-index: 1;
-       }
-       .mynav_dropdown-content a {
-           float: none;
-           color: black;
-           padding: 12px 16px;
-           display: block;
-       }
-       .mynav_dropdown:hover .mynav_dropdown-content{
-           display: block;
-       }
-        a{
-           color: red;
+        .mynav_navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
 
-       }
-        a:hover{
-           background-color: red;
-       }
-        
-        
+            .mynav_navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+        .mynav_dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+            .mynav_dropdown .mynav_dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .mynav_navbar a:hover, .mynav_dropdown:hover .mynav_dropbtn {
+                background-color: red;
+            }
+
+        .mynav_dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .mynav_dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                display: block;
+            }
+
+        .mynav_dropdown:hover .mynav_dropdown-content {
+            display: block;
+           
+        }
+
+        .mynav_dropdown-content a {
+            color: black;
+        }
+
+            .mynav_dropdown-content a:hover {
+                background-color: red;
+            }
     </style>
 
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-            
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>
-                        <div class="mynav_dropdown">
-                            <button class="mynav_dropbtn">Transection
-                                <i class="fade fa-caret-down"></i>
-                            </button>
-                            <div class="mynav_dropdown-content">
-                                @Html.ActionLink("Products", "DisplayProduct", "Product")
-                                @Html.ActionLink("Purchase Product", "DisplayPurchase", "Purchase")
-                                @Html.ActionLink("Sale Product", "DisplaySale", "Sale")
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>
+                            <div class="mynav_dropdown">
+                                <button class="mynav_dropbtn">
+                                    Transection
+                                    <i class="fade fa-caret-down"></i>
+                                </button>
+                                <div class="mynav_dropdown-content">
+                                    @Html.ActionLink("Products", "DisplayProduct", "Product")
+                                    @Html.ActionLink("Purchase Product", "DisplayPurchase", "Purchase")
+                                    @Html.ActionLink("Sale Product", "DisplaySale", "Sale")
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="mynav_dropdown">
-                            <button class="mynav_dropbtn">
-                                Reports
-                                <i class="fade fa-caret-down"></i>
-                            </button>
-                            <div class="mynav_dropdown-content">
-                                <a href="~/ProductReport.aspx">List Of Product</a>
-                                <a href="~/PurchaseReport.aspx">PurchaseReport</a>
-                                <a href="~/SalesReport.aspx">SalesReport</a>
+                        </li>
+                        <li>
+                            <div class="mynav_dropdown">
+                                <button class="mynav_dropbtn">
+                                    Reports
+                                    <i class="fade fa-caret-down"></i>
+                                </button>
+                                <div class="mynav_dropdown-content">
+                                    <a class="cl" href="~/ProductReport.aspx">List Of Product</a>
+                                    <a class="cl"  href="~/PurchaseReport.aspx">PurchaseReport</a>
+                                    <a  class="cl" href="~/SalesReport.aspx">SalesReport</a>
+                                </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
 
 
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-           
-         
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+
+
+                </div>
             </div>
         </div>
+   
 
-    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -227,6 +146,8 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+   
 </body>
+
 </html>
 

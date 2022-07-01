@@ -248,6 +248,13 @@
     <Content Include="Content\themes\base\datepicker.css" />
     <Content Include="Content\themes\base\dialog.css" />
     <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\1.jpg" />
+    <Content Include="Content\themes\base\images\2.jpg" />
+    <Content Include="Content\themes\base\images\3.jpg" />
+    <Content Include="Content\themes\base\images\4.png" />
+    <Content Include="Content\themes\base\images\5.jpg" />
+    <Content Include="Content\themes\base\images\6.jpg" />
+    <Content Include="Content\themes\base\images\7.jpg" />
     <Content Include="Content\themes\base\images\abc.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
